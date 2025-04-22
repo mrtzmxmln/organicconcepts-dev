@@ -1,86 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>OC | Pool</title>
 
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./img/icons/favicon.ico">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./img/icons/favicon.ico" />
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <div id="navigation" class="flexColumnCenterCenter"></div>
 
-    <div class="fullWidth flexColumnCenterCenter colorSetA" style="padding-top: 100px;">
-        <div class="container">
-
-            <div class="pool flexRowBetweenCenter wrap">
-                <div>
-                    <span class="sub">Aus unserem Pool kannst du</span>
-                    <h1>Technik mieten.</h1>
-                </div>
-                <div>
-                    <img class="poolImage" src="./img/pool/pioneer_setup_a.png" alt="">
-                </div>
-            </div> 
-
+    <div
+      class="fullWidth flexColumnCenterCenter colorSetA"
+      style="padding-top: 100px"
+    >
+      <div class="container">
+        <div class="pool flexRowBetweenCenter wrap">
+          <div>
+            <span class="sub">Aus unserem Pool kannst du</span>
+            <h1>Technik mieten.</h1>
+          </div>
+          <div>
+            <img
+              class="poolImage"
+              src="./img/pool/pioneer_setup_a.png"
+              alt=""
+            />
+          </div>
         </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="poolInstructions flexColumnCenterCenter">
+        <h2 style="text-align: center">Sende uns deine Anfrage:</h2>
+        <div class="steps flexRowAroundCenter">
+          <div class="step">
+            <strong>1. Produkte auswählen</strong><br />
+            Lege die gewünschten Artikel in den Warenkorb.
+          </div>
+          <div class="step">
+            <strong>2. Anfrage absenden</strong><br />
+            Fülle das kurze Formular direkt im Warenkorb aus.
+          </div>
+          <div class="step">
+            <strong>3. Angebot erhalten</strong><br />
+            Wir melden uns schnellstmöglich mit deinem Angebot.
+          </div>
+        </div>
+        <p class="request-contact-hint">
+          Fragen? Schreib uns – wir helfen dir persönlich weiter.
+        </p>
+      </div>
     </div>
 
     <div class="fullWidth flexColumnCenterCenter colorSetA">
-        <div class="container poolObjects flexRowAroundCenter wrap">
-            
-            <div class="poolObject flexColumnCenter colorSetB">
-                <div class="poolObjectImage flexCenter">
-                    <img src="./img/pool/soundboks_go.png" alt="">
-                </div>
-                <div class="flexColumnCenterCenter">
-                    <span class="sub">Soundboks</span>
-                    <h2>SOUNDBOKS GO</h2>
-                    <button onclick="addToCart('SOUNDBOKS GO', 'Soundboks', './img/pool/soundboks_go.png')">hinzufügen</button>
-                </div>
-            </div>
-
-            <div class="poolObject flexColumnCenter colorSetB">
-                <div class="poolObjectImage flexCenter">
-                    <img src="./img/pool/pioneer_djm_2000.png" alt="">
-                </div>
-                <div class="flexColumnCenterCenter">
-                    <span class="sub">Pioneer DJ</span>
-                    <h2>DJM 2000</h2>
-                    <button onclick="addToCart('DJM 2000', 'Pioneer DJ', './img/pool/pioneer_djm_2000.png')">hinzufügen</button>
-                </div>
-            </div>
-
-            <div class="poolObject flexColumnCenter colorSetB">
-                <div class="poolObjectImage flexCenter">
-                    <img src="./img/pool/xone_k2.png" alt="">
-                </div>
-                <div class="flexColumnCenterCenter">
-                    <span class="sub">Allen & Heath</span>
-                    <h2>Xone:K2</h2>
-                    <button onclick="addToCart('Xone K:2', 'Allen & Heath', './img/pool/xone_k2.png')">hinzufügen</button>
-                </div>
-            </div>
-
+      <div class="container poolObjects flexRowAroundCenter wrap">
+        <div class="poolObject flexColumnCenter colorSetB">
+          <div class="poolObjectImage flexCenter">
+            <img src="./img/pool/soundboks_go.png" alt="" />
+          </div>
+          <div class="flexColumnCenterCenter">
+            <span class="sub">Soundboks</span>
+            <h2>SOUNDBOKS GO</h2>
+            <button
+              onclick="addToCart('SOUNDBOKS GO', 'Soundboks', './img/pool/soundboks_go.png')"
+            >
+              hinzufügen
+            </button>
+          </div>
         </div>
+
+        <div class="poolObject flexColumnCenter colorSetB">
+          <div class="poolObjectImage flexCenter">
+            <img src="./img/pool/pioneer_djm_2000.png" alt="" />
+          </div>
+          <div class="flexColumnCenterCenter">
+            <span class="sub">Pioneer DJ</span>
+            <h2>DJM 2000</h2>
+            <button
+              onclick="addToCart('DJM 2000', 'Pioneer DJ', './img/pool/pioneer_djm_2000.png')"
+            >
+              hinzufügen
+            </button>
+          </div>
+        </div>
+
+        <div class="poolObject flexColumnCenter colorSetB">
+          <div class="poolObjectImage flexCenter">
+            <img src="./img/pool/xone_k2.png" alt="" />
+          </div>
+          <div class="flexColumnCenterCenter">
+            <span class="sub">Allen & Heath</span>
+            <h2>Xone:K2</h2>
+            <button
+              onclick="addToCart('Xone K:2', 'Allen & Heath', './img/pool/xone_k2.png')"
+            >
+              hinzufügen
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
 
-    
     <div id="sidebar"></div>
     <div id="footer" class="container"></div>
-    
+
     <!-- SCRIPTS -->
     <script src="./script/importCode.js"></script>
     <script src="./script/redirect.js"></script>
     <script src="./script/animation.js"></script>
     <script src="./script/cart.js"></script>
-    
-</body>
+  </body>
 </html>

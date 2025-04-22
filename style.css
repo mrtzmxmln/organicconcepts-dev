@@ -223,8 +223,6 @@ body{
     max-width: 450px;
 }
 
-
-
 .poolObject {
     border-radius: 20px;
     margin: 20px;
@@ -243,6 +241,13 @@ body{
 
 .poolObjects {
     margin-bottom: 40px;
+}
+
+/* POOL INSTRUCTIONS */
+.poolInstructions {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 20px;
 }
 
 /* CONSULTING */
@@ -383,6 +388,10 @@ button a:link, button a:visited {
 @font-face {
     font-family: "Archivo";
     src: url(./font/Archivo-VariableFont_wdth\,wght.ttf);
+}
+
+h1, h2, h3, h4 {
+    text-align: center;
 }
 
 h1 {
@@ -569,6 +578,42 @@ span .sub {
     cursor: pointer;
 }
 
+.request-info-box {
+    padding: 30px;
+    background-color: rgba(255,255,255,0.05);
+    border-radius: 16px;
+    color: white;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.request-info-box h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.steps {
+    gap: 20px;
+    padding: 20px;
+}
+
+.step {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    width: 100%;
+    padding: 20px;
+}
+
+.request-contact-hint {
+    margin-top: 30px;
+    font-size: 14px;
+    text-align: center;
+    color: #ccc;
+}
+
 /* === VIEWPORT < 768px === */
 @media screen and (max-width: 768px) {
     
@@ -576,8 +621,11 @@ span .sub {
         max-width: 300px;
     }
 
-}
+    .steps {
+        flex-direction: column;
+    }
 
+}
 
 @media screen and (max-width: 680px) {
     
