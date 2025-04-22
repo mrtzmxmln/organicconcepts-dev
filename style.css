@@ -250,6 +250,10 @@ body{
     padding: 20px;
 }
 
+.poolInstructions h2 {
+    text-align: center;
+}
+
 /* CONSULTING */
 .consulting {
     min-height: 40vh;
@@ -258,10 +262,18 @@ body{
     padding: 40px;
 }
 
+.consulting h1 {
+    text-align: center;
+}
+
 /* DESIGN */
 .design {
     padding: 40px;
     margin: 20px;
+}
+
+.design h2 {
+    text-align: center;
 }
 
 /* GAMING */
@@ -388,10 +400,6 @@ button a:link, button a:visited {
 @font-face {
     font-family: "Archivo";
     src: url(./font/Archivo-VariableFont_wdth\,wght.ttf);
-}
-
-h1, h2, h3, h4 {
-    text-align: center;
 }
 
 h1 {
