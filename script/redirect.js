@@ -1,9 +1,9 @@
 function openHome() {
-  window.location.href = "./";
+  window.location.href = "../";
 }
 
 function openPool() {
-  window.location.href = "./pool.html";
+  window.location.href = "../pool/";
 }
 
 function openInstagram() {
