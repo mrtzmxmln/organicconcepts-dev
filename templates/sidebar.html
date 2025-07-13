@@ -26,16 +26,39 @@
           ✕
         </button>
       </div>
-      <label for="vorname">Vorname:</label>
-      <input type="text" name="vorname" placeholder="Vorname" required />
-      <label for="nachnmame">Nachname:</label>
-      <input type="text" name="nachname" placeholder="Nachname" required />
-      <label for="email">E-Mail:</label>
-      <input type="email" name="email" placeholder="E-Mail" required />
-      <label for="mobil">Mobil:</label>
-      <input type="tel" name="mobil" placeholder="Mobil" required />
-      <label for="date">Datum der Veranstaltung:</label>
-      <input type="date" name="date" id="anfragedatum" required />
+
+      <fieldset>
+        <legend>Kontaktdaten</legend>
+        <label for="vorname">Vorname</label>
+        <input type="text" name="vorname" placeholder="Vorname" required />
+        <label for="nachnmame">Nachname</label>
+        <input type="text" name="nachname" placeholder="Nachname" required />
+        <label for="email">E-Mail</label>
+        <input type="email" name="email" placeholder="E-Mail" required />
+        <label for="mobil">Mobil</label>
+        <input type="tel" name="mobil" placeholder="Mobil" required />
+      </fieldset>
+
+      <fieldset>
+        <legend>Veranstaltung</legend>
+        <label for="date">Datum</label>
+        <input type="date" name="date" id="anfragedatum" required />
+        <label for="strasse">Straße</label>
+        <input type="text" name="strasse" placeholder="Straße" required />
+        <label for="hausnr">Hausnummer</label>
+        <input type="text" name="hausnr" placeholder="Hausnummer" required />
+        <label for="plz">PLZ</label>
+        <input
+          type="text"
+          name="plz"
+          placeholder="PLZ"
+          pattern="\d{5}"
+          required
+        />
+        <label for="ort">Ort</label>
+        <input type="text" name="ort" placeholder="Ort" required />
+      </fieldset>
+
       <button type="submit">Absenden</button>
     </form>
   </div>

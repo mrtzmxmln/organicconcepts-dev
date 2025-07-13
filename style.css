@@ -248,6 +248,7 @@ body{
 /* CONSULTING */
 .consulting {
     min-height: 40vh;
+    height: fit-content;
     border-radius: 20px;
     margin: 20px;
     padding: 40px;
@@ -512,6 +513,7 @@ span .sub {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    box-sizing: border-box;
   }
 
 .request-form input {
@@ -519,6 +521,9 @@ span .sub {
     font-size: 16px;
     border-radius: 6px;
     border: 1px solid #ccc;
+    display: block;
+    max-width: 100%;
+    margin-top: 5px;
 }
 
 .request-form button[type="submit"] {
@@ -529,6 +534,27 @@ span .sub {
     border: none;
     cursor: pointer;
     border-radius: 8px;
+}
+
+.request-form fieldset {
+  border: none;
+  padding: 0;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.request-form legend {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 16px;
+  padding: 0;
+}
+
+.request-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 500;
 }
 
 .close-request-form {

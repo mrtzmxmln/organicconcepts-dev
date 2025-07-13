@@ -124,6 +124,10 @@ function submitRequest(event) {
     email: form.email.value,
     mobil: form.mobil.value,
     datum: form.date.value,
+    strasse: form.strasse.value,
+    hausnr: form.hausnr.value,
+    plz: form.plz.value,
+    ort: form.ort.value,
     produkte: cartItems.map((item) => item.name),
   };
 
