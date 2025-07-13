@@ -128,7 +128,7 @@ function submitRequest(event) {
   };
 
   const webhookUrl =
-    "https://hook.eu2.make.com/ip8pq7pw49npcbaqp99nyi3cxtpr2aw1";
+    "https://hook.eu2.make.com/1bek982btjukzmk23j3t9zkpj3jkt8ba";
 
   fetch(webhookUrl, {
     method: "POST",
