@@ -10,10 +10,8 @@ function openConsulting() {
   window.location.href = "../consulting/";
 }
 
-function openMeet() {
-  window
-    .open("https://calendar.app.google/LhZnkfNco4Pi6Qdo7", "_blank")
-    .focus();
+function openCal() {
+  window.open("https://cal.com/oc-moritz/kennenlernen", "_blank").focus();
 }
 
 function openInstagram() {
