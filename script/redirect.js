@@ -21,3 +21,7 @@ function openInstagram() {
 function openDiscord() {
   window.open("http://discord.organicconcepts.de", "_blank").focus();
 }
+
+function openEvents() {
+  window.open("http://tickets.organicconcepts.de", "_blank").focus();
+}
