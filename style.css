@@ -252,12 +252,14 @@ body{
     border-radius: 20px;
     margin: 20px;
     padding: 40px;
+    align-items: center;
 }
 
-/* DESIGN */
-.design {
+/* EVENTS */
+.events {
     padding: 40px;
     margin: 20px;
+    align-items: right;
 }
 
 /* GAMING */
@@ -344,14 +346,14 @@ body{
 /* BUTTONS */
 button {
     display: flex;
-    padding: 15px 20px;
+    padding: 18px 22px;
     max-width: fit-content;
     border-radius: 10px;
     align-items: center;
     border: none;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 700;
 }
 
