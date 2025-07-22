@@ -247,12 +247,21 @@ body{
 
 /* CONSULTING */
 .consulting {
-    min-height: 40vh;
     height: fit-content;
     border-radius: 20px;
     margin: 20px;
     padding: 40px;
     align-items: center;
+    gap: 20px;
+}
+
+.consultingItem {
+    width: 100%;
+    max-width: 380px;
+    padding: 20px;
+    padding-bottom: 40px;
+    border-radius: 20px;
+    margin-bottom: 20px;
 }
 
 /* EVENTS */
