@@ -246,28 +246,42 @@ body{
 }
 
 /* CONSULTING */
-.consulting {
-    height: fit-content;
+.consultingHead {
     border-radius: 20px;
     margin: 20px;
     padding: 40px;
-    align-items: center;
     gap: 20px;
+}
+
+.consultingText {
+    padding: 20px;
+    max-width: 560px;
+    font-size: large;
+    margin-bottom: 60px;
+}
+
+.consultingItems {
+    padding: 20px;
+    gap: 40px;
 }
 
 .consultingItem {
     width: 100%;
-    max-width: 380px;
+    max-width: 400px;
     padding: 20px;
     padding-bottom: 40px;
     border-radius: 20px;
-    margin-bottom: 20px;
+}
+
+.consultingCallToAction {
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 /* EVENTS */
 .events {
     padding: 40px;
-    margin: 20px;
+    margin-top: 100px;
     align-items: right;
 }
 
@@ -292,7 +306,7 @@ body{
 
 /* FOOTER*/
 .footer {
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: flex-start;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -303,6 +317,7 @@ body{
 .footer .card {
     padding: 20px;
     font-size: 14px;
+    min-width: 100px;
 }
 
 .footer .card .cardHeading {
@@ -711,4 +726,17 @@ span .sub {
     .cart-sidebar {
         max-width: 100%;
     }
+
+    .consultingHead {
+        flex-direction: column;
+    }
+
+    .consultingItems {
+        gap: 20px;
+    }
+
+    .consultingItem {
+        max-width: 100%;
+    }
+
 }
