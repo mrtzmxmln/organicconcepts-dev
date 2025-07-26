@@ -383,13 +383,15 @@ body{
 }
 
 .socialIcons {
+    width: 100%;
     margin-bottom: 20px;
 }
 
 .socialIcons img {
     padding: 10px;
     filter: invert(1);
-    max-width: 30px;
+    max-width: 40px;
+    max-height: 40px;
 }
 
 /* BUTTONS */
@@ -698,7 +700,6 @@ span .sub {
         flex-direction: column;
         align-items: flex-start;
         padding: 0;
-        padding-left: 20px;
         width: 100%;
         display: none; /* wird per JS eingeblendet */
         gap: 10px; /* optional: Abstand zwischen Links */
