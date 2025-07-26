@@ -730,10 +730,6 @@ span .sub {
         max-width: 100%;
     }
 
-    .consultingHead {
-        min-height: 80vh;
-    }
-
     .consultingCard {
         flex-direction: column;
     }
