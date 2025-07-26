@@ -187,6 +187,7 @@ body{
 /* HOME */
 .home {
     overflow: hidden;
+    position: relative;
 }
 
 .home::before {
@@ -197,7 +198,7 @@ body{
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: url("./img/home/home_background.jpg");
+    background-image: url(./img/home/home_background.jpg);
     background-size: cover;
     -webkit-background-size: cover;
     background-position: center;
@@ -283,10 +284,31 @@ body{
 
 /* EVENTS */
 .events {
-    min-height: 40vh;
-    padding: 40px;
-    align-items: right;
+    min-height: 60vh;
+    overflow: hidden;
+    position: relative;
 }
+
+.events::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("./img/events/DekmantelFestival_20220806_1727_Kleo_HL_6206_BartHeemskerk_Socials-1.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-position: bottom;
+    z-index: 5;
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
+    opacity: 0.3;
+    margin: 0;
+}
+
+
+
 
 /* GAMING */
 .gaming {
