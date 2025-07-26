@@ -10,6 +10,10 @@ function openConsulting() {
   window.location.href = "../consulting/";
 }
 
+function openGaming() {
+  window.location.href = "../gaming/";
+}
+
 function openMail() {
   window.open("mailto:info@organicconcepts.de");
 }
