@@ -665,8 +665,16 @@ span .sub {
         max-width: 300px;
     }
 
+    .consultingHead {
+        padding-top: 100px;
+    }
+
     .consultingHead h1 {
         text-align: center;
+    }
+
+    .consultingItems {
+        padding-top: 50px;
     }
 
 }
