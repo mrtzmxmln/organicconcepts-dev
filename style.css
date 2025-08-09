@@ -775,6 +775,10 @@ span .sub {
         max-width: 100%;
     }
 
+    .consultingHead img {
+        max-width: 80%;
+    }
+
     .consultingCard {
         flex-direction: column;
     }
