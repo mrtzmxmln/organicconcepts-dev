@@ -249,6 +249,16 @@ body{
 /* CONSULTING */
 .consultingHead {
     min-height: 100vh;
+    gap: 20px;
+}
+
+.consultingHead img {
+    max-width: 300px;
+    border-radius: 20px;
+}
+
+.consultingHead h1 {
+    padding: 20px;
 }
 
 .consultingCard {
@@ -653,6 +663,10 @@ span .sub {
     
     .poolImage {
         max-width: 300px;
+    }
+
+    .consultingHead h1 {
+        text-align: center;
     }
 
 }
