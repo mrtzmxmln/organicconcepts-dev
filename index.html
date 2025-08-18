@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Organic Concepts</title>
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" href="../img/icons/favicon.ico" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <div id="navigation" class="flexColumnCenterCenter"></div>
+
+    <!-- Home Header -->
+    <div class="home fullWidth flexColumnCenterCenter">
+      <div class="header container flexColumnCenterCenter">
+        <span class="sub">wir sind dein</span>
+        <h1>digitaler Partner</h1>
+      </div>
+    </div>
+
+    <div
+      class="fullWidth flexColumnCenterCenter colorSetA"
+      style="padding-top: 100px; padding-bottom: 100px"
+    >
+      <!-- Home Pool -->
+      <div class="container">
+        <div class="pool flexRowBetweenCenter wrap">
+          <div>
+            <span class="sub">Aus unserem Pool kannst du</span>
+            <h1>Technik mieten.</h1>
+            <button onclick="openPool()">Pool</button>
+          </div>
+          <div>
+            <img
+              class="poolImage"
+              src="../img/pool/pioneer_setup_a.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Home Consulting -->
+    <div class="fullWidth flexColumnCenterCenter colorSetA">
+      <div class="container" style="padding-bottom: 100px">
+        <div class="consultingCard flexRowAroundCenter colorSetB">
+          <div class="flexColumnCenterCenter">
+            <span class="sub">Strategisch denken,</span>
+            <h2 style="margin-bottom: 0">digital handeln.</h2>
+          </div>
+
+          <button onclick="openConsulting()">Consulting</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Home Events -->
+    <div class="events fullWidth flexColumnCenterCenter colorSetB">
+      <div class="container" style="z-index: 10">
+        <div class="flexColumnCenterCenter">
+          <span class="sub">Betritt unsere Welt</span>
+          <h2>avantgardistischer</h2>
+          <button onclick="openEvents()">Events</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="sidebar"></div>
+    <div id="footer" class="container"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../script/importCode.js"></script>
+    <script src="../script/redirect.js"></script>
+    <script src="../script/animation.js"></script>
+    <script src="../script/cart.js"></script>
+  </body>
+</html>
