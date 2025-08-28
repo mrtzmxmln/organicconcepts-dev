@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Brockmeyer Consulting – Formular Mockup</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="bc-header">
+      <div class="container">
+        <a class="brand" href="#" aria-label="Brockmeyer Consulting">
+          <span class="brand-mark">B</span>
+          <span class="brand-text">Brockmeyer&nbsp;Consulting</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <h1>Steueroptimierter Vermögensaufbau – <span class="accent">unverbindlich starten</span></h1>
+            <p class="lead">
+              Trage deine Daten ein und starte mit einer kurzen Erstaufnahme. 
+              Das Formular ist für das Einbetten vorbereitet (Mockup).
+            </p>
+          </div>
+          <div class="card">
+            <form
+              class="bc-form"
+              target="_blank"
+              action="https://www.finametrica.de/Login.aspx?"
+              method="get"
+              novalidate
+            >
+              <div class="form-row">
+                <label for="firstName">Vorname</label>
+                <input id="firstName" name="p1" type="text" autocomplete="given-name" placeholder="Max" required />
+              </div>
+              <div class="form-row">
+                <label for="lastName">Nachname</label>
+                <input id="lastName" name="p2" type="text" autocomplete="family-name" placeholder="Mustermann" required />
+              </div>
+              <div class="form-row">
+                <label for="email">E-Mail</label>
+                <input id="email" name="p3" type="email" autocomplete="email" placeholder="max@beispiel.de" required />
+              </div>
+
+              <!-- Hidden -->
+              <input type="hidden" name="p4" value="GER" />
+              <input type="hidden" name="p5" value="client" />
+              <input type="hidden" name="p6" value="3906135" />
+              <input type="hidden" name="p7" value="create" />
+              <input type="hidden" name="p8" value="v3.0" />
+
+              <button class="btn-primary" type="submit">Jetzt absenden</button>
+
+              <p class="form-hint">
+                Durch Absenden öffnet sich ein neuer Tab mit der Zielseite.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust">
+        <div class="container trust-grid">
+          <div class="trust-item">
+            <div class="trust-badge">§ 34d</div>
+            <span>Versicherungsmakler</span>
+          </div>
+          <div class="trust-item">
+            <div class="trust-badge">§ 34f</div>
+            <span>Finanzanlagen (Kat. 1)</span>
+          </div>
+          <div class="trust-item">
+            <div class="trust-badge">§ 34c</div>
+            <span>Immobilien & Darlehen</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bc-footer">
+      <div class="container">
+        <small>Mockup • Nicht produktiv • © Brockmeyer Consulting</small>
+      </div>
+    </footer>
+  </body>
+</html>
