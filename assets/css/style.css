@@ -1,0 +1,363 @@
+:root {
+  --font-main: 'Archivo', sans-serif;
+
+  /* Dynamische Größen-Skalierung */
+  --step-0: clamp(1.05rem, 0.85rem + 0.25vw, 1.1rem); 
+  --step-1: clamp(1.1rem, 1.1rem + 0.5vw, 1.2rem);    
+  --step-2: clamp(1.2rem, 1.3rem + 0.8vw, 1.5rem);   
+  --step-5: clamp(1.5rem, 1.8rem + 4vw, 2.0rem);
+
+  /* Zeilenabstände (Line-Height) */
+  --lh-body: 1.6;    /* Wichtig: Hier definiert! */
+  --lh-heading: 1.1;
+
+  --colorA: #000;
+  --colorB: #fff;
+}
+
+.colorSetA {
+  color: var(--colorA);
+  background-color: var(--colorB);
+}
+
+.colorSetB {
+  color: var(--colorB);
+  background-color: var(--colorA);
+}
+
+/* Reset & Basis-Setup */
+* {
+  box-sizing: border-box; /* Sorgt dafür, dass Paddings die Breite nicht sprengen */
+}
+
+html, body {
+  margin: 0; 
+  padding: 0;
+  font-family: var(--font-main);
+  font-size: var(--step-0);
+  line-height: var(--lh-body);
+  color: #fff;
+  background-color: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Überschriften */
+h1 {
+  font-size: var(--step-5);
+  line-height: var(--lh-heading);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-top: 0; /* Verhindert ungewollte Lücken oben */
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: var(--step-2);
+  line-height: var(--lh-heading);
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-size: var(--step-1);
+  line-height: var(--lh-heading);
+  font-weight: 600;
+  margin-bottom: 0.4em;
+}
+
+/* Fließtext */
+p {
+  font-size: var(--step-0);
+  margin-bottom: 1.5rem;
+  max-width: 75ch; /* Beste Lesebreite */
+}
+
+.textCenter {
+  text-align: center;
+}
+
+/* STYLES */
+.flex {
+  display: flex;
+}
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexColumnCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center
+}
+
+.flexColumnCenterCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexColumnAroundCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.flexRowCenter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.flexRowCenterCenter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexRowAroundCenter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flexRowBetween {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between
+}
+
+.flexRowBetweenCenter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+/* OBJECTS */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 100;
+  padding: 20px;
+
+  background: rgba(0, 0, 0, 0.7); 
+  backdrop-filter: blur(10px); 
+}
+
+.navLogo {
+  height: 100%;
+}
+
+.navLink {
+  padding: 20px;
+}
+
+header {
+  min-height: 100vh;
+  display: flex;
+  padding: 20px;
+}
+
+section {
+  display: flex;
+  padding: 40px 20px 40px 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1080px;
+  display: flex;
+  padding: 20px;
+}
+
+button {
+  display: flex;
+  padding: 15px 25px;
+  max-width: fit-content;
+  border-radius: 10px;
+  align-items: center;
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.footer {
+  width: 100%;
+  padding: 20px;
+}
+
+.footerBoxes {
+  width: 100%;
+  font-size: 14px;
+}
+
+.footerBoxes span {
+  font-weight: bold;
+}
+
+.footerBoxes a {
+  color: var(--colorB);
+  text-decoration: none;
+}
+
+.footerSocials {
+  padding: 40px 20px 10px 20px;
+}
+
+.footerSocial {
+  padding: 10px;
+}
+
+.footerSocial img {
+  width: 40px;
+  height: 40px;
+  filter: invert(1);
+}
+
+.footerCopyright {
+  font-size: 12px;
+}
+
+/* SPECIFICS */
+.homeHeader {
+  overflow: hidden;
+  position: relative;
+}
+
+.homeHeader::before {
+    height: 105vh;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(/assets/media/img/bg_home.jpg);
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-position: center;
+    filter: blur(3px) grayscale(100%);
+    -webkit-filter: blur(3px) grayscale(100%);
+    opacity: 0.3;
+    margin: 0;
+}
+
+.homeHeader div {
+  z-index: 10;
+}
+
+.homeServicesBox div {
+  align-items: center;
+  text-align: center;
+  max-width: 320px;
+  padding: 20px;
+}
+
+.homeServicesBox img {
+  max-width: 150px;
+}
+
+.homeEventsHeader {
+  min-height: 80vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.homeEventsHeader::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(/assets/media/img/bg_events.jpg);
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-position: bottom;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    opacity: 0.3;
+    margin: 0;
+}
+
+.homeEventsHeader div {
+  z-index: 10;
+}
+
+
+.servicesHeader {
+  overflow: hidden;
+  position: relative;
+}
+
+.servicesHeader::before {
+    height: 105vh;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(/assets/media/img/bg_services.jpg);
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-position: center;
+    filter: blur(2px) grayscale(100%);
+    -webkit-filter: blur(2px) grayscale(100%);
+    opacity: 0.3;
+    margin: 0;
+}
+
+.servicesHeader div {
+  z-index: 10;
+}
+
+.servicesBox {
+  padding-top: 20px;
+  padding-bottom: 20px
+}
+
+.serviceBox {
+  column-gap: 40px;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px
+}
+
+.serviceBoxText {
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.servicesBox img {
+  max-width: 200px;
+  max-height: 200px;
+}
