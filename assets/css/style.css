@@ -154,6 +154,10 @@ p {
   flex-wrap: wrap;
 }
 
+.viewHeight {
+  height: 100vh;
+}
+
 /* OBJECTS */
 nav {
   position: fixed;
@@ -173,7 +177,7 @@ nav {
 }
 
 .navLink {
-  padding: 20px;
+  padding: 20px 0 20px 20px;
   cursor: pointer;
 }
 
@@ -448,14 +452,15 @@ button {
 
   .navLinks {
     display: none; /* Zuerst verstecken */
-    position: absolute;
+    position: fixed;
     top: 80px; /* Höhe deiner Nav */
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(0, 0, 0, 0.7);
     flex-direction: column; /* Links untereinander */
     padding: 20px 0;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
 
   /* Diese Klasse wird per JS hinzugefügt */
