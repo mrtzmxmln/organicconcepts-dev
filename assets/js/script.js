@@ -45,4 +45,5 @@ async function loadHTML(url, selector) {
 }
 
 loadHTML("/assets/html/nav.html", "#nav");
+loadHTML("/assets/html/contact.html", "#contact");
 loadHTML("/assets/html/footer.html", "#footer");
