@@ -2,8 +2,8 @@
   --font-main: 'Archivo', sans-serif;
 
   /* Dynamische Größen-Skalierung */
-  --step-0: clamp(1.05rem, 0.85rem + 0.25vw, 1.1rem); 
-  --step-1: clamp(1.1rem, 1.1rem + 0.5vw, 1.2rem);    
+  --step-0: clamp(0.9rem, 0.85rem + 0.25vw, 1.0rem); 
+  --step-1: clamp(1.0rem, 1.1rem + 0.5vw, 1.2rem);    
   --step-2: clamp(1.2rem, 1.3rem + 0.8vw, 1.5rem);   
   --step-5: clamp(1.5rem, 1.8rem + 4vw, 2.0rem);
 
@@ -163,7 +163,6 @@ nav {
   width: 100%;
   height: 80px;
   z-index: 100;
-  padding: 20px;
 
   background: rgba(0, 0, 0, 0.7); 
   backdrop-filter: blur(10px); 
@@ -211,7 +210,6 @@ button {
 
 .footer {
   width: 100%;
-  padding: 20px;
 }
 
 .footerBoxes {
