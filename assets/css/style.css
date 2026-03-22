@@ -8,7 +8,7 @@
   --step-5: clamp(1.3rem, 1.8rem + 4vw, 2.0rem);
 
   /* Zeilenabstände (Line-Height) */
-  --lh-body: 1.6;    /* Wichtig: Hier definiert! */
+  --lh-body: 1.6;    
   --lh-heading: 1.1;
 
   --colorA: #000;
@@ -27,7 +27,7 @@
 
 /* Reset & Basis-Setup */
 * {
-  box-sizing: border-box; /* Sorgt dafür, dass Paddings die Breite nicht sprengen */
+  box-sizing: border-box;
 }
 
 html, body {
@@ -69,7 +69,7 @@ h3 {
 p {
   font-size: var(--step-0);
   margin-bottom: 1.5rem;
-  max-width: 75ch; /* Beste Lesebreite */
+  max-width: 75ch;
 }
 
 .textCenter {
@@ -169,10 +169,44 @@ nav {
 
 .navLogo {
   height: 100%;
+  cursor: pointer;
 }
 
 .navLink {
   padding: 20px;
+  cursor: pointer;
+}
+
+/* BURGER MENÜ */
+.burgerMenu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 101;
+}
+
+.burgerMenu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--colorB);
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out; /* Basis für flüssige Animation */
+}
+
+/* Animation zum X */
+.burgerMenu.toggle span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.burgerMenu.toggle span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.burgerMenu.toggle span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 header {
@@ -205,6 +239,25 @@ button {
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
+}
+
+.contact {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 100%;
+  height: 100%;
+}
+
+.contactForm input, .contactForm textarea {
+  gap: 20px;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: inherit;
+  resize: vertical;
 }
 
 .footer {
@@ -273,10 +326,11 @@ button {
 }
 
 .homeServicesBox div {
+  flex: 1;
   align-items: center;
   text-align: center;
   max-width: 320px;
-  padding: 20px;
+  min-width: 280px;
 }
 
 .homeServicesBox img {
@@ -384,4 +438,34 @@ button {
 
 .eventsHeader div {
   z-index: 10;
+}
+
+/* Mobile Media Query */
+@media (max-width: 768px) {
+  .burgerMenu {
+    display: flex; /* Auf Mobile anzeigen */
+  }
+
+  .navLinks {
+    display: none; /* Zuerst verstecken */
+    position: absolute;
+    top: 80px; /* Höhe deiner Nav */
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    flex-direction: column; /* Links untereinander */
+    padding: 20px 0;
+    backdrop-filter: blur(10px);
+  }
+
+  /* Diese Klasse wird per JS hinzugefügt */
+  .navLinks.active {
+    display: flex;
+  }
+
+  .navLink {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+  }
 }

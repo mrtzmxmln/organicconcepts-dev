@@ -1,22 +1,28 @@
-<div class="flexCenter colorSetA">
-  <div class="container flexColumn">
-    <h1>Kontakt</h1>
-    <p>Schreib uns eine Nachricht, wir melden uns!</p>
-    <form id="contactForm" class="flexColumn">
-      <input
-        type="text"
-        id="firstName"
-        name="firstName"
-        placeholder="Vorname"
-        required
-      />
-      <input
-        type="text"
-        id="lastName"
-        name="lastName"
-        placeholder="Nachname"
-        required
-      />
-    </form>
-  </div>
-</div>
+<h1>Kontakt</h1>
+<p>Schreib uns eine Nachricht, wir melden uns!</p>
+<form id="contactForm" class="flexColumn contactForm">
+  <input
+    type="text"
+    id="firstName"
+    name="firstName"
+    placeholder="Vorname"
+    required
+  />
+  <input
+    type="text"
+    id="lastName"
+    name="lastName"
+    placeholder="Nachname"
+    required
+  />
+  <input type="email" id="email" name="email" placeholder="E-Mail" required />
+  <input type="phone" id="phone" name="phone" placeholder="Telefon / Mobil" />
+  <textarea
+    name="message"
+    id="message"
+    placeholder="Nachricht"
+    rows="5"
+    required
+  ></textarea>
+  <button type="submit" class="submit-btn colorSetB">Absenden</button>
+</form>
