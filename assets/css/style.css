@@ -2,10 +2,10 @@
   --font-main: 'Archivo', sans-serif;
 
   /* Dynamische Größen-Skalierung */
-  --step-0: clamp(0.9rem, 0.85rem + 0.25vw, 1.0rem); 
-  --step-1: clamp(1.0rem, 1.1rem + 0.5vw, 1.2rem);    
-  --step-2: clamp(1.2rem, 1.3rem + 0.8vw, 1.5rem);   
-  --step-5: clamp(1.5rem, 1.8rem + 4vw, 2.0rem);
+  --step-0: 1rem; 
+  --step-1: clamp(1.1rem, 1.1rem + 0.5vw, 1.2rem);    
+  --step-2: clamp(1.2rem, 1.3rem + 0.8vw, 1.3rem);   
+  --step-5: clamp(1.3rem, 1.8rem + 4vw, 2.0rem);
 
   /* Zeilenabstände (Line-Height) */
   --lh-body: 1.6;    /* Wichtig: Hier definiert! */
@@ -46,17 +46,16 @@ html, body {
 h1 {
   font-size: var(--step-5);
   line-height: var(--lh-heading);
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: -0.02em;
-  margin-top: 0; /* Verhindert ungewollte Lücken oben */
-  margin-bottom: 0.5em;
+  margin: 0 0 20px 0;
 }
 
 h2 {
   font-size: var(--step-2);
   line-height: var(--lh-heading);
-  font-weight: 700;
-  margin-bottom: 0.5em;
+  font-weight: 400;
+  margin: 0 0 20px 0;
 }
 
 h3 {
