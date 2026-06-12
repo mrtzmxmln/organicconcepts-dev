@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Organic Concepts — IT &amp; Business Development</title>
-<meta name="description" content="Organic Concepts — IT &amp; Business Development. Strategisch denken, digital handeln.">
+<title>Organic Concepts — IT & Business Development</title>
+<meta name="description" content="Organic Concepts — IT & Business Development. Strategisch denken, digital handeln.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -47,19 +47,43 @@
   .svc h3 { font-family: var(--font-display); font-weight: 900; text-transform: uppercase; font-size: var(--fs-l); margin-top: var(--sp-6); }
   .svc p { margin-top: var(--sp-2); font-size: var(--fs-base); color: inherit; max-width: 26ch; }
 
+  /* Plans */
+  .plans { display: grid; grid-template-columns: repeat(3, 1fr); border-top: var(--border); }
+  .plan { padding: var(--sp-8) var(--gutter); border-right: var(--border); display: flex; flex-direction: column; gap: var(--sp-4); }
+  .plan:last-child { border-right: none; }
+  .plan--featured { background: var(--c-black); color: var(--c-white); --line: var(--c-white); --fg: var(--c-white); border-right-color: var(--c-black); }
+  .plan__badge { display: inline-block; border: var(--border-hair); padding: 0.3em 0.7em; font-size: var(--fs-xs); margin-bottom: var(--sp-2); }
+  .plan--featured .plan__badge { border-color: var(--accent); color: var(--accent); }
+  .plan__name { font-family: var(--font-display); font-weight: 900; text-transform: uppercase; font-size: var(--fs-xl); line-height: 0.9; }
+  .plan__price { font-family: var(--font-display); font-weight: 900; font-size: var(--fs-xxl); line-height: 0.85; margin-top: var(--sp-2); }
+  .plan__price sub { font-family: var(--font-mono); font-size: var(--fs-s); font-weight: 400; vertical-align: sub; opacity: 0.55; }
+  .plan__features { flex: 1; list-style: none; margin-top: var(--sp-2); }
+  .plan__features li { font-family: var(--font-mono); font-size: var(--fs-s); padding: 0.55em 0; border-bottom: 1px solid currentColor; opacity: 0.65; }
+  .plan__features li::before { content: '→ '; color: var(--accent); opacity: 1; }
+  .plan--featured .plan__features li { opacity: 0.8; }
+  .plan__cta { margin-top: var(--sp-4); }
+  .plan--featured .plan__cta .btn { background: var(--accent); color: var(--c-black); border-color: var(--accent); box-shadow: 8px 8px 0 var(--accent); }
+  .plan--featured .plan__cta .btn:hover { box-shadow: 4px 4px 0 var(--accent); }
+
+  /* Contact */
   .engage { background: var(--c-black); color: var(--c-white); padding: var(--sp-12) var(--gutter); }
   .engage h2 { font-family: var(--font-display); font-weight: 900; text-transform: uppercase; line-height: 0.85; font-size: var(--fs-mega); letter-spacing: var(--tracking-mega); }
   .engage h2 em { font-style: normal; color: var(--accent); }
   .engage__row { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: var(--sp-6); margin-top: var(--sp-8); }
   .engage a.mail { font-family: var(--font-mono); font-size: var(--fs-l); border-bottom: 3px solid var(--accent); }
   .engage a.mail:hover { color: var(--accent); }
-  footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: var(--sp-2); padding: var(--sp-2) var(--gutter); border-top: var(--border-hair); font-family: var(--font-mono); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: var(--tracking-mono); }
+
+  footer { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--sp-2); padding: var(--sp-3) var(--gutter); border-top: var(--border-hair); font-family: var(--font-mono); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: var(--tracking-mono); }
+  footer a { opacity: 0.55; transition: opacity var(--speed) var(--ease); }
+  footer a:hover { opacity: 1; }
+  .footer__legal { display: flex; gap: var(--sp-4); }
 
   @media (max-width: 820px) {
     .vision { grid-template-columns: 1fr; }
     .vision__label { border-right: none; border-bottom: var(--border); }
-    .services { grid-template-columns: 1fr; }
+    .services, .plans { grid-template-columns: 1fr; }
     .svc { border-right: none; border-bottom: var(--border); min-height: auto; }
+    .plan { border-right: none; border-bottom: var(--border); }
     .nav__links { display: none; }
   }
 </style>
@@ -72,6 +96,7 @@
       <a href="#vision">Ansatz</a>
       <a href="#it">IT</a>
       <a href="#events">Events</a>
+      <a href="#plans">Plans</a>
       <a href="#engage">Kontakt</a>
     </div>
   </nav>
@@ -153,17 +178,80 @@
     </div>
   </section>
 
+  <section id="plans" class="divider-thick">
+    <div class="block__head">
+      <h2>Partner<br>Plans</h2>
+      <span class="eyebrow">[ 04 ] SUBSCRIPTIONS</span>
+    </div>
+    <div class="plans">
+
+      <article class="plan">
+        <span class="plan__badge eyebrow">Professional</span>
+        <div class="plan__name">Profes&shy;sional</div>
+        <div class="plan__price">99€<sub>&nbsp;/ Monat</sub></div>
+        <ul class="plan__features">
+          <li>Automation Service</li>
+          <li>bis zu 10 Automations</li>
+          <li>Basic Support</li>
+          <li>Partner Portal</li>
+        </ul>
+        <div class="plan__cta">
+          <a href="https://pay.organicconcepts.de/b/28E7sL06b2QR8Zl3gI1VK00" target="_blank" rel="noopener" class="btn btn--ghost">Plan buchen →</a>
+        </div>
+      </article>
+
+      <article class="plan plan--featured">
+        <span class="plan__badge eyebrow">★ Empfohlen</span>
+        <div class="plan__name">Business</div>
+        <div class="plan__price">199€<sub>&nbsp;/ Monat</sub></div>
+        <ul class="plan__features">
+          <li>Administration Service</li>
+          <li>Automation Service</li>
+          <li>bis zu 50 Automations</li>
+          <li>Advanced Support</li>
+          <li>Partner Portal</li>
+        </ul>
+        <div class="plan__cta">
+          <a href="https://pay.organicconcepts.de/b/cNi7sL3in633b7t7wY1VK01" target="_blank" rel="noopener" class="btn">Plan buchen →</a>
+        </div>
+      </article>
+
+      <article class="plan">
+        <span class="plan__badge eyebrow">Enterprise</span>
+        <div class="plan__name">Enter&shy;prise</div>
+        <div class="plan__price">499€<sub>&nbsp;/ Monat</sub></div>
+        <ul class="plan__features">
+          <li>Consulting Service</li>
+          <li>Administration Service</li>
+          <li>Automation Service</li>
+          <li>ab 50 Automations</li>
+          <li>Premium Support</li>
+          <li>Partner Portal</li>
+        </ul>
+        <div class="plan__cta">
+          <a href="https://pay.organicconcepts.de/b/28E9ATf159ff6RddVm1VK02" target="_blank" rel="noopener" class="btn btn--ghost">Plan buchen →</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
   <section class="engage" id="engage">
-    <span class="eyebrow fg-accent">[ 04 ] ENGAGE</span>
+    <span class="eyebrow fg-accent">[ 05 ] ENGAGE</span>
     <h2>LASS UNS<br><em>BAUEN.</em></h2>
     <div class="engage__row">
-      <a class="mail" href="mailto:moritz@organicconcepts.de">moritz@organicconcepts.de</a>
-      <a href="mailto:moritz@organicconcepts.de" class="btn">Projekt starten →</a>
+      <a class="mail" href="mailto:hi@organicconcepts.de">hi@organicconcepts.de</a>
+      <a href="mailto:hi@organicconcepts.de" class="btn">Projekt starten →</a>
     </div>
   </section>
 
   <footer>
     <span>© 2026 ORGANIC CONCEPTS</span>
+    <nav class="footer__legal">
+      <a href="/impressum/">Impressum</a>
+      <a href="/datenschutz/">Datenschutz</a>
+      <a href="/agb/">AGB</a>
+    </nav>
     <span>STRATEGISCH DENKEN, DIGITAL HANDELN.</span>
   </footer>
 

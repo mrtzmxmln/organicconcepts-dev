@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Organic Concepts — Impressum</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../design-system.css">
+<style>
+  .nav { position: sticky; top: 0; z-index: 50; display: flex; justify-content: space-between; align-items: center; padding: var(--sp-2) var(--gutter); background: var(--bg); border-bottom: var(--border); }
+  .nav__brand { font-family: var(--font-mono); font-weight: 700; letter-spacing: var(--tracking-wide); text-transform: uppercase; }
+  .nav__brand b { color: var(--c-black); background: var(--accent); padding: 0 0.3em; }
+  .nav__back { font-family: var(--font-mono); font-size: var(--fs-s); text-transform: uppercase; letter-spacing: var(--tracking-mono); }
+  .nav__back:hover { color: var(--c-grey-500); }
+
+  .page-header { padding: var(--sp-8) var(--gutter) var(--sp-6); border-bottom: var(--border-thick); }
+  .page-header .eyebrow { margin-bottom: var(--sp-3); display: block; }
+  .page-header h1 { font-family: var(--font-display); font-weight: 900; text-transform: uppercase; font-size: var(--fs-xl); line-height: 0.9; }
+
+  .content { padding: var(--sp-8) var(--gutter); max-width: 72ch; }
+  .content p { font-size: var(--fs-base); line-height: 1.6; margin-bottom: var(--sp-4); }
+  .content a { border-bottom: 1px solid var(--accent); }
+  .content a:hover { color: var(--c-grey-500); }
+
+  footer { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--sp-2); padding: var(--sp-3) var(--gutter); border-top: var(--border-hair); font-family: var(--font-mono); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: var(--tracking-mono); }
+  footer a { opacity: 0.55; }
+  footer a:hover { opacity: 1; }
+  .footer__legal { display: flex; gap: var(--sp-4); }
+</style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="/" class="nav__brand">ORGANIC<b>CONCEPTS</b></a>
+    <a href="/" class="nav__back">← Zurück</a>
+  </nav>
+
+  <header class="page-header">
+    <span class="eyebrow">[ LEGAL ]</span>
+    <h1>Impressum</h1>
+  </header>
+
+  <div class="content">
+    <p class="eyebrow" style="color:var(--c-grey-500); margin-bottom: var(--sp-4);">Angaben gemäß § 5 TMG</p>
+    <p>
+      Organic Concepts<br>
+      Moritz Meyer<br>
+      Königstraße 129<br>
+      23552 Lübeck
+    </p>
+    <p>
+      <a href="mailto:info@organicconcepts.de">info@organicconcepts.de</a>
+    </p>
+  </div>
+
+  <footer>
+    <span>© 2026 ORGANIC CONCEPTS</span>
+    <nav class="footer__legal">
+      <a href="/impressum/">Impressum</a>
+      <a href="/datenschutz/">Datenschutz</a>
+      <a href="/agb/">AGB</a>
+    </nav>
+    <span>STRATEGISCH DENKEN, DIGITAL HANDELN.</span>
+  </footer>
+
+</body>
+</html>
