@@ -22,10 +22,4 @@ jobs:
             set -e
             cd /root/organicconcepts-dev
             git pull origin main
-
-            docker exec -w /app oc_dev_app composer install --no-interaction --prefer-dist --optimize-autoloader --no-dev
-            docker exec -w /app oc_dev_app php artisan migrate --force
-            docker exec -w /app oc_dev_app php artisan config:cache
-            docker exec -w /app oc_dev_app php artisan route:cache
-            docker exec -w /app oc_dev_app php artisan view:cache
             echo "OC deploy complete!"

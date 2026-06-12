@@ -1,0 +1,235 @@
+/* =====================================================================
+   ORGANIC CONCEPTS — BRUTALIST DESIGN SYSTEM
+   Zentrale Quelle für Farben, Typografie, Spacing & Primitives.
+   In allen Konzepten (A/B/C) via <link> eingebunden.
+   ---------------------------------------------------------------------
+   Philosophie: roh, direkt, ungeschliffen. Sichtbare Struktur,
+   harte Linien, keine Rundungen, keine weichen Schatten. Eine einzige
+   grelle Akzentfarbe bricht das "Organische" bewusst ironisch.
+   ===================================================================== */
+
+/* ------------------------------------------------------------------ */
+/* 1. DESIGN TOKENS                                                    */
+/* ------------------------------------------------------------------ */
+:root {
+  /* --- Farben: harter Kontrast + EIN greller Akzent ---------------- */
+  --c-black:        #0a0a0a;   /* fast-schwarz, weniger steril als #000 */
+  --c-white:        #f4f4f0;   /* warmes Papierweiß, nicht reines Weiß  */
+  --c-paper:        #ffffff;
+  --c-ink:          #0a0a0a;
+
+  --c-accent:       #c6ff00;   /* Acid-/Neon-Grün — der ironische Bruch */
+  --c-accent-alt:   #ff4d00;   /* Sekundär-Akzent (sparsam einsetzbar)  */
+
+  --c-grey-900:     #161616;
+  --c-grey-700:     #2a2a2a;
+  --c-grey-500:     #6b6b6b;
+  --c-grey-300:     #b8b8b3;
+  --c-grey-100:     #e3e3dd;
+
+  /* Semantische Aliase (Konzepte überschreiben diese bei Bedarf) ---- */
+  --bg:             var(--c-white);
+  --fg:             var(--c-ink);
+  --accent:         var(--c-accent);
+  --line:           var(--c-ink);
+
+  /* --- Typografie ------------------------------------------------- */
+  --font-mono:  "Space Mono", "IBM Plex Mono", ui-monospace, "SFMono-Regular",
+                 Menlo, Consolas, monospace;
+  --font-grotesk: "Archivo", "Helvetica Neue", "Arial Black", Inter,
+                 system-ui, sans-serif;
+  --font-display: "Archivo", "Helvetica Neue", Impact, sans-serif;
+
+  /* Fluid type scale (clamp: min, vw, max) ------------------------- */
+  --fs-mega:   clamp(3.5rem, 14vw, 13rem);
+  --fs-xxl:    clamp(2.75rem, 9vw, 7rem);
+  --fs-xl:     clamp(2rem, 6vw, 4.5rem);
+  --fs-l:      clamp(1.5rem, 3.5vw, 2.5rem);
+  --fs-m:      clamp(1.125rem, 2vw, 1.5rem);
+  --fs-base:   clamp(1rem, 1.2vw, 1.125rem);
+  --fs-s:      0.8125rem;
+  --fs-xs:     0.6875rem;
+
+  --lh-tight:  0.9;
+  --lh-snug:   1.05;
+  --lh-body:   1.5;
+
+  --tracking-mega:   -0.04em;
+  --tracking-tight:  -0.02em;
+  --tracking-wide:   0.04em;
+  --tracking-mono:   0.12em;   /* für Labels / Eyebrows in Versalien   */
+
+  /* --- Spacing (8px-Basis, brutalistisch großzügig) --------------- */
+  --sp-0:   0;
+  --sp-1:   0.5rem;
+  --sp-2:   1rem;
+  --sp-3:   1.5rem;
+  --sp-4:   2rem;
+  --sp-6:   3rem;
+  --sp-8:   4rem;
+  --sp-12:  6rem;
+  --sp-16:  8rem;
+  --sp-24:  12rem;
+
+  /* --- Struktur --------------------------------------------------- */
+  --border:        3px solid var(--line);
+  --border-thick:  6px solid var(--line);
+  --border-hair:   1px solid var(--line);
+  --radius:        0;            /* NIEMALS Rundungen */
+  --shadow-hard:   8px 8px 0 var(--line);  /* harter Offset statt Blur */
+  --maxw:          1600px;
+  --gutter:        clamp(1rem, 4vw, 4rem);
+
+  --speed:         0.18s;
+  --ease:          cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* ------------------------------------------------------------------ */
+/* 2. RESET                                                            */
+/* ------------------------------------------------------------------ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-grotesk);
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+  font-feature-settings: "kern" 1;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+
+::selection { background: var(--accent); color: var(--c-black); }
+
+/* ------------------------------------------------------------------ */
+/* 3. TYPOGRAFIE-PRIMITIVES                                            */
+/* ------------------------------------------------------------------ */
+.mono { font-family: var(--font-mono); }
+.display {
+  font-family: var(--font-display);
+  font-weight: 900;
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-s);
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+}
+
+.h-mega { font-size: var(--fs-mega); letter-spacing: var(--tracking-mega); line-height: var(--lh-tight); }
+.h-xxl  { font-size: var(--fs-xxl);  line-height: var(--lh-tight); }
+.h-xl   { font-size: var(--fs-xl);   line-height: var(--lh-snug); }
+.h-l    { font-size: var(--fs-l); }
+
+/* ------------------------------------------------------------------ */
+/* 4. LAYOUT-PRIMITIVES                                                */
+/* ------------------------------------------------------------------ */
+.wrap   { width: 100%; max-width: var(--maxw); margin-inline: auto; padding-inline: var(--gutter); }
+.section{ padding-block: var(--sp-16); }
+.divider{ border-top: var(--border); }
+.divider-thick { border-top: var(--border-thick); }
+
+/* Sichtbares Grid-Overlay (brutalistisches Struktur-Statement) ----- */
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); }
+.grid-12{ display: grid; grid-template-columns: repeat(12, 1fr); }
+
+/* ------------------------------------------------------------------ */
+/* 5. KOMPONENTEN                                                      */
+/* ------------------------------------------------------------------ */
+
+/* Button — kantig, mit hartem Offset-Schatten ---------------------- */
+.btn {
+  display: inline-flex; align-items: center; gap: var(--sp-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-m);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  padding: var(--sp-3) var(--sp-6);
+  background: var(--accent);
+  color: var(--c-black);
+  border: var(--border);
+  box-shadow: var(--shadow-hard);
+  transition: transform var(--speed) var(--ease), box-shadow var(--speed) var(--ease);
+}
+.btn:hover  { transform: translate(4px, 4px); box-shadow: 4px 4px 0 var(--line); }
+.btn:active { transform: translate(8px, 8px); box-shadow: 0 0 0 var(--line); }
+
+.btn--ghost { background: transparent; color: var(--fg); }
+.btn--invert{ background: var(--fg); color: var(--bg); }
+
+/* Karten / Service-Tiles ------------------------------------------- */
+.tile {
+  border: var(--border);
+  padding: var(--sp-4);
+  background: var(--bg);
+  transition: background var(--speed) var(--ease), color var(--speed) var(--ease);
+}
+.tile:hover { background: var(--accent); color: var(--c-black); }
+
+/* Index-Nummern für Listen ----------------------------------------- */
+.index {
+  font-family: var(--font-mono);
+  font-size: var(--fs-s);
+  letter-spacing: var(--tracking-mono);
+}
+
+/* Marquee / Laufband ----------------------------------------------- */
+.marquee {
+  overflow: hidden; white-space: nowrap;
+  border-block: var(--border);
+  background: var(--c-black); color: var(--c-white);
+}
+.marquee__track {
+  display: inline-block;
+  padding-block: var(--sp-2);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-mono);
+  animation: marquee 22s linear infinite;
+}
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* Tag / Pill (eckig) ----------------------------------------------- */
+.tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-mono);
+  border: var(--border-hair);
+  padding: 0.35em 0.75em;
+}
+
+/* ------------------------------------------------------------------ */
+/* 6. UTILITIES                                                        */
+/* ------------------------------------------------------------------ */
+.bg-black { background: var(--c-black); color: var(--c-white); }
+.bg-accent{ background: var(--accent); color: var(--c-black); }
+.fg-accent{ color: var(--accent); }
+.invert   { background: var(--c-black); color: var(--c-white); --line: var(--c-white); --fg: var(--c-white); --bg: var(--c-black); }
+.upper    { text-transform: uppercase; }
+.center   { text-align: center; }
+.stroke   { -webkit-text-stroke: 2px var(--line); color: transparent; }
+
+/* ------------------------------------------------------------------ */
+/* 7. MOTION / ACCESSIBILITY                                           */
+/* ------------------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+:focus-visible { outline: 4px solid var(--c-accent-alt); outline-offset: 3px; }
