@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brockmeyer Consulting – Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+          dark:  '#0D1B2A', navy:  '#1A3A6B',
+          gold:  '#C88B2A', 'gold-light': '#E8A93A', 'gold-pale': '#FBF3E2',
+          light: '#F8F6F1', gray: '#6B7280'
+        }
+      },
+      fontFamily: { sans: ['Inter', 'sans-serif'] }
+    }
+  }
+}
+</script>
+<style>
+body { font-family: 'Inter', sans-serif; }
+@keyframes fadeInUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+.animate-fadeinup { animation: fadeInUp 0.6s ease forwards; }
+.text-gold-gradient {
+  background: linear-gradient(135deg, #C88B2A 0%, #E8A93A 50%, #C88B2A 100%);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+}
+.nav-link { position:relative; }
+.nav-link::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:2px; background:#C88B2A; transition:width .25s ease; }
+.nav-link:hover::after { width:100%; }
+</style>
+</head>
+<body class="bg-white text-brand-dark antialiased">
+
+<!-- NAV -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex items-center justify-between py-4">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 bg-brand-navy rounded flex items-center justify-center">
+          <span class="text-white font-bold text-sm">BC</span>
+        </div>
+        <span class="font-bold text-lg text-brand-dark tracking-tight">Brockmeyer <span class="text-brand-navy">Consulting</span></span>
+      </div>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#leistungen" class="nav-link text-sm font-medium text-brand-gray hover:text-brand-dark">Leistungen</a>
+        <a href="#preise" class="nav-link text-sm font-medium text-brand-gray hover:text-brand-dark">Preise</a>
+        <a href="#netzwerk" class="nav-link text-sm font-medium text-brand-gray hover:text-brand-dark">Netzwerk</a>
+        <a href="#ueber" class="nav-link text-sm font-medium text-brand-gray hover:text-brand-dark">Über uns</a>
+        <a href="https://calendly.com/kevin-brockmeyer/brockmeyer-consulting-15-minuten" target="_blank"
+           class="bg-brand-navy text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-brand-dark transition-colors">
+          Gespräch buchen
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="pt-[72px]">
+
+<!-- HERO -->
+<section class="relative overflow-hidden bg-white">
+  <div class="absolute inset-0 bg-gradient-to-br from-brand-light via-white to-white pointer-events-none"></div>
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-8 py-24 lg:py-32">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="animate-fadeinup">
+        <div class="inline-flex items-center gap-2 bg-brand-gold-pale border border-brand-gold/30 text-brand-gold font-semibold text-xs px-3 py-1.5 rounded-full mb-6">
+          ✓ 100% Honorarbasis · Keine Provisionen
+        </div>
+        <h1 class="text-5xl lg:text-6xl font-black text-brand-dark leading-tight mb-6">
+          Klare Finanzen.<br>
+          <span class="text-gold-gradient">Feste Preise.</span><br>
+          Ein Partner.
+        </h1>
+        <p class="text-lg text-brand-gray leading-relaxed mb-8 max-w-lg">
+          Strategische Finanzberatung für ambitionierte Menschen – transparent, digital und ohne Interessenkonflikte. Du weißt von Anfang an, was dich erwartet.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href="https://calendly.com/kevin-brockmeyer/brockmeyer-consulting-15-minuten" target="_blank"
+             class="inline-flex items-center justify-center gap-2 bg-brand-navy text-white font-semibold px-6 py-3.5 rounded-xl hover:bg-brand-dark transition-all hover:shadow-lg hover:-translate-y-0.5 text-sm">
+            Kostenloses Erstgespräch →
+          </a>
+          <a href="#preise"
+             class="inline-flex items-center justify-center gap-2 border border-gray-200 text-brand-dark font-semibold px-6 py-3.5 rounded-xl hover:border-brand-navy hover:text-brand-navy transition-all text-sm">
+            Preise ansehen
+          </a>
+        </div>
+        <div class="flex flex-wrap items-center gap-6 mt-10 pt-10 border-t border-gray-100">
+          <div class="text-center"><p class="text-2xl font-black text-brand-dark">300+</p><p class="text-xs text-brand-gray font-medium">Mandanten</p></div>
+          <div class="w-px h-8 bg-gray-200"></div>
+          <div class="text-center"><p class="text-2xl font-black text-brand-dark">1.000+</p><p class="text-xs text-brand-gray font-medium">Beratungen</p></div>
+          <div class="w-px h-8 bg-gray-200"></div>
+          <div class="text-center"><p class="text-2xl font-black text-brand-dark">4,97★</p><p class="text-xs text-brand-gray font-medium">Kundenbewertung</p></div>
+          <div class="w-px h-8 bg-gray-200"></div>
+          <div class="text-center"><p class="text-2xl font-black text-brand-dark">100%</p><p class="text-xs text-brand-gray font-medium">Digital</p></div>
+        </div>
+      </div>
+      <div class="hidden lg:block">
+        <div class="relative">
+          <div class="bg-brand-navy rounded-2xl p-8 text-white shadow-2xl">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-brand-gold-light text-lg">📊</div>
+              <div><p class="font-semibold text-sm">Finanz-Cockpit</p><p class="text-xs text-gray-400">Echtzeit-Überblick</p></div>
+            </div>
+            <div class="space-y-3 mb-6">
+              <div class="flex justify-between items-center"><span class="text-xs text-gray-400">Gesamtvermögen</span><span class="font-bold text-brand-gold-light">€ 284.500</span></div>
+              <div class="w-full bg-white/10 rounded-full h-1.5"><div class="bg-brand-gold-light h-1.5 rounded-full" style="width:71%"></div></div>
+              <div class="flex justify-between items-center"><span class="text-xs text-gray-400">Rendite YTD</span><span class="font-bold text-green-400">+12,4%</span></div>
+              <div class="flex justify-between items-center"><span class="text-xs text-gray-400">Sparrate</span><span class="font-bold text-white">€ 1.800/Monat</span></div>
+              <div class="flex justify-between items-center"><span class="text-xs text-gray-400">Finanzielle Freiheit</span><span class="font-bold text-white">2041 · 15 Jahre</span></div>
+            </div>
+            <div class="bg-white/10 rounded-xl p-3 text-xs text-gray-300">💡 Optimierungspotenzial erkannt: Steuerliche Umschichtung könnte +€ 3.200/Jahr einsparen.</div>
+          </div>
+          <div class="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-lg px-4 py-3 flex items-center gap-3">
+            <div class="flex text-yellow-400 text-sm">★★★★★</div>
+            <div><p class="text-xs font-semibold text-brand-dark">4,97 von 5</p><p class="text-xs text-brand-gray">300+ Bewertungen</p></div>
+          </div>
+          <div class="absolute -top-4 -right-4 bg-white rounded-xl shadow-lg px-4 py-3">
+            <p class="text-xs font-semibold text-brand-dark">Honorarberater</p>
+            <p class="text-xs text-brand-gray">0% Provision</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNER STRIP -->
+<section class="bg-brand-light border-y border-gray-100">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-10">
+    <p class="text-xs font-semibold text-brand-gray text-center uppercase tracking-widest mb-8">Unser Expertennetzwerk</p>
+    <div class="flex flex-wrap justify-center items-center gap-8 lg:gap-16">
+      <a href="https://www.finvoice.de" target="_blank" class="text-brand-gray hover:text-brand-dark font-bold text-sm transition-colors">finvoice</a>
+      <a href="https://www.honorarkonzept.de" target="_blank" class="text-brand-gray hover:text-brand-dark font-bold text-sm transition-colors">honorarkonzept</a>
+      <a href="https://www.blaudirekt.de" target="_blank" class="text-brand-gray hover:text-brand-dark font-bold text-sm transition-colors">blaudirekt</a>
+      <a href="https://brockmeyerkevin.juradirekt.com" target="_blank" class="text-brand-gray hover:text-brand-dark font-bold text-sm transition-colors">juradirekt</a>
+      <span class="text-brand-gray font-bold text-sm opacity-40">+ weitere Partner</span>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN POINTS -->
+<section id="leistungen" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <p class="text-xs font-semibold text-brand-gold uppercase tracking-widest mb-3">Das kennst du wahrscheinlich</p>
+      <h2 class="text-4xl lg:text-5xl font-black text-brand-dark">Warum Finanzen so unnötig kompliziert sind.</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-brand-light rounded-2xl p-6"><div class="text-3xl mb-4">😰</div><h3 class="font-bold text-brand-dark mb-2">Angst vor Fehlentscheidungen</h3><p class="text-sm text-brand-gray leading-relaxed">Im Job bist du Experte. Bei Finanzen fühlst du dich wie ein Amateur. Eine falsche Entscheidung kostet Tausende.</p></div>
+      <div class="bg-brand-light rounded-2xl p-6"><div class="text-3xl mb-4">🌀</div><h3 class="font-bold text-brand-dark mb-2">Chaos statt Klarheit</h3><p class="text-sm text-brand-gray leading-relaxed">Konten hier, Depots da, alte Versicherungen irgendwo. Niemand hat das große Ganze im Blick.</p></div>
+      <div class="bg-brand-light rounded-2xl p-6"><div class="text-3xl mb-4">🏷️</div><h3 class="font-bold text-brand-dark mb-2">Versteckte Kosten</h3><p class="text-sm text-brand-gray leading-relaxed">Provisionsmodelle, undurchsichtige Gebühren. Du weißt nie, wessen Interessen eigentlich vertreten werden.</p></div>
+      <div class="bg-brand-light rounded-2xl p-6"><div class="text-3xl mb-4">⏰</div><h3 class="font-bold text-brand-dark mb-2">Keine Zeit</h3><p class="text-sm text-brand-gray leading-relaxed">60-Stunden-Woche, Familie, Freizeit – und dann noch Finanzen? Monat für Monat geht Potenzial verloren.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY BC -->
+<section class="py-24 bg-brand-dark text-white">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <p class="text-xs font-semibold text-brand-gold-light uppercase tracking-widest mb-4">Unsere Antwort</p>
+        <h2 class="text-4xl lg:text-5xl font-black leading-tight mb-6">Finanzberatung<br>wie sie sein sollte.</h2>
+        <p class="text-gray-300 leading-relaxed mb-6">Wir glauben, dass du für Beratung zahlen solltest – nicht für Produkte. Kein Provisionsmodell, keine Interessenkonflikte. Nur klare Strategie, faire Preise und einen Partner, der auf deiner Seite steht.</p>
+        <a href="#leistungen" class="inline-flex items-center gap-2 text-brand-gold-light font-semibold text-sm">Alle Leistungen →</a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="bg-white/5 border border-white/10 rounded-xl p-5"><div class="text-2xl mb-3">💰</div><h3 class="font-bold text-white mb-2 text-sm">Flat Fee</h3><p class="text-xs text-gray-400 leading-relaxed">Ein fester Jahresbetrag – kein Prozentsatz deines Vermögens, keine Provisionen.</p></div>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-5"><div class="text-2xl mb-3">🤝</div><h3 class="font-bold text-white mb-2 text-sm">Fiduciary</h3><p class="text-xs text-gray-400 leading-relaxed">Wir arbeiten ausschließlich in deinem Interesse. Kein Produkt, das wir empfehlen müssen.</p></div>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-5"><div class="text-2xl mb-3">📱</div><h3 class="font-bold text-white mb-2 text-sm">100% Digital</h3><p class="text-xs text-gray-400 leading-relaxed">Dein Finanz-Cockpit in Echtzeit. Vollständige Kontrolle, jederzeit, von überall.</p></div>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-5"><div class="text-2xl mb-3">🌐</div><h3 class="font-bold text-white mb-2 text-sm">Expertennetzwerk</h3><p class="text-xs text-gray-400 leading-relaxed">Steuer, Recht, Versicherung: Wir koordinieren dein gesamtes Finanzleben.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="preise" class="py-24 bg-brand-light">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <p class="text-xs font-semibold text-brand-gold uppercase tracking-widest mb-3">Transparente Preisgestaltung</p>
+      <h2 class="text-4xl lg:text-5xl font-black text-brand-dark">Ein fester Preis.<br>Keine Überraschungen.</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <!-- Basis -->
+      <div class="bg-white border border-gray-100 rounded-2xl p-8 flex flex-col shadow-sm">
+        <h3 class="font-bold text-lg text-brand-dark mb-1">Basis</h3>
+        <p class="text-sm text-brand-gray mb-4">Für Einsteiger und Menschen, die Ordnung in ihre Finanzen bringen wollen.</p>
+        <div class="mb-6"><span class="text-4xl font-black text-brand-dark">€125</span><span class="text-sm text-brand-gray"> / Monat</span><p class="text-xs text-brand-gray mt-1">€ 1.500 / Jahr</p></div>
+        <a href="https://calendly.com/kevin-brockmeyer/brockmeyer-consulting-15-minuten" target="_blank" class="block text-center bg-brand-light text-brand-navy font-bold py-3 rounded-xl border border-brand-navy/20 hover:bg-brand-navy hover:text-white transition-all text-sm mb-6">Erstgespräch buchen</a>
+        <ul class="space-y-2 flex-1">
+          <li class="flex items-center gap-2 text-sm"><span class="text-brand-navy">✓</span> Finanzstandort-Analyse</li>
+          <li class="flex items-center gap-2 text-sm"><span class="text-brand-navy">✓</span> Persönliche Finanzstrategie</li>
+          <li class="flex items-center gap-2 text-sm"><span class="text-brand-navy">✓</span> Digitales Finanz-Cockpit</li>
+          <li class="flex items-center gap-2 text-sm"><span class="text-brand-navy">✓</span> 4 Gespräche / Jahr</li>
+          <li class="flex items-center gap-2 text-sm"><span class="text-brand-navy">✓</span> Versicherungscheck</li>
+        </ul>
+      </div>
+      <!-- Premium -->
+      <div class="relative bg-brand-navy text-white rounded-2xl p-8 flex flex-col shadow-2xl" style="transform:scale(1.03)">
+        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-gold text-white text-xs font-black px-5 py-1.5 rounded-full">BELIEBTESTE WAHL</div>
+        <h3 class="font-bold text-lg text-white mb-1">Premium</h3>
+        <p class="text-sm text-gray-300 mb-4">Für High Performer mit aktivem Vermögensaufbau.</p>
+        <div class="mb-6"><span class="text-4xl font-black text-white">€250</span><span class="text-sm text-gray-300"> / Monat</span><p class="text-xs text-gray-400 mt-1">€ 3.000 / Jahr</p></div>
+        <a href="https://calendly.com/kevin-brockmeyer/brockmeyer-consulting-15-minuten" target="_blank" class="block text-center bg-brand-gold text-white font-bold py-3 rounded-xl hover:bg-brand-gold-light transition-all text-sm mb-6">Erstgespräch buchen</a>
+        <ul class="space-y-2 flex-1">
+          <li class="flex items-center gap-2 text-sm"><span class="text-brand-gold-light">✓</span> Alles aus Basis</li>
+          <li class="flex items-center gap-2 text-sm"><span class="text-brand-gold-light">✓</span> Unbegrenzte Gespräche</li>
+          <li class="flex items-center gap-2 text-sm"><span class="text-brand-gold-light">✓</span> Steueroptimierung</li>
+          <li class="flex items-center gap-2 text-sm"><span class="text-brand-gold-light">✓</span> Vorsorgeplanung komplett</li>
+          <li class="flex items-center gap-2 text-sm"><span class="text-brand-gold-light">✓</span> Aktive Investmentstrategie</li>
+          <li class="flex items-center gap-2 text-sm"><span class="text-brand-gold-light">✓</span> Expertennetzwerk-Zugang</li>
+        </ul>
+      </div>
+      <!-- Elite -->
+      <div class="bg-white border border-gray-100 rounded-2xl p-8 flex flex-col shadow-sm">
+        <h3 class="font-bold text-lg text-brand-dark mb-1">Elite</h3>
+        <p class="text-sm text-brand-gray mb-4">Für komplexe Situationen, Unternehmer, Immobilien.</p>
+        <div class="mb-6"><span class="text-4xl font-black text-brand-dark">€450</span><span class="text-sm text-brand-gray"> / Monat</span><p class="text-xs text-brand-gray mt-1">€ 5.400 / Jahr</p></div>
+        <a href="https://calendly.com/kevin-brockmeyer/brockmeyer-consulting-15-minuten" target="_blank" class="block text-center bg-brand-light text-brand-navy font-bold py-3 rounded-xl border border-brand-navy/20 hover:bg-brand-navy hover:text-white transition-all text-sm mb-6">Erstgespräch buchen</a>
+        <ul class="space-y-2 flex-1">
+          <li class="flex items-center gap-2 text-sm"><span class="text-brand-navy">✓</span> Alles aus Premium</li>
+          <li class="flex items-center gap-2 text-sm"><span class="text-brand-navy">✓</span> Unternehmensfinanzierung</li>
+          <li class="flex items-center gap-2 text-sm"><span class="text-brand-navy">✓</span> Immobilienstrategie</li>
+          <li class="flex items-center gap-2 text-sm"><span class="text-brand-navy">✓</span> Internationale Strukturen</li>
+          <li class="flex items-center gap-2 text-sm"><span class="text-brand-navy">✓</span> Direktkontakt Kevin</li>
+        </ul>
+      </div>
+    </div>
+    <p class="text-center text-xs text-brand-gray mt-8">Alle Preise netto zzgl. MwSt. · Das Erstgespräch ist immer kostenlos und unverbindlich.</p>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <p class="text-xs font-semibold text-brand-gold uppercase tracking-widest mb-3">Mandantenstimmen</p>
+      <h2 class="text-4xl lg:text-5xl font-black text-brand-dark">Was unsere Mandanten sagen.</h2>
+      <div class="flex items-center justify-center gap-1.5 mt-4">
+        <div class="flex text-yellow-400">★★★★★</div>
+        <span class="font-bold text-brand-dark">4,97</span>
+        <span class="text-brand-gray text-sm">von 5 Sternen</span>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-brand-light rounded-2xl p-6"><div class="flex text-yellow-400 text-sm mb-3">★★★★★</div><p class="text-brand-dark text-sm leading-relaxed mb-4">"Trotz anfänglicher Skepsis konnten sie mich ihrer Kompetenz vollends überzeugen. Durch die umfängliche Beratung und die Flexibilität mehr als zufrieden."</p><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-full bg-brand-navy flex items-center justify-center text-white font-bold text-xs">D</div><div><p class="font-semibold text-sm text-brand-dark">Dennis K.</p><p class="text-xs text-brand-gray">Nordrhein-Westfalen</p></div></div></div>
+      <div class="bg-brand-light rounded-2xl p-6"><div class="flex text-yellow-400 text-sm mb-3">★★★★★</div><p class="text-brand-dark text-sm leading-relaxed mb-4">"Normalerweise bewerte ich sehr kritisch, aber hier muss ich überall 5/5 Sterne geben. Maßgeschneidert beraten und in allen Belangen bestens aufgehoben."</p><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-full bg-brand-navy flex items-center justify-center text-white font-bold text-xs">M</div><div><p class="font-semibold text-sm text-brand-dark">Marcel H.</p><p class="text-xs text-brand-gray">Nordrhein-Westfalen</p></div></div></div>
+      <div class="bg-brand-light rounded-2xl p-6"><div class="flex text-yellow-400 text-sm mb-3">★★★★★</div><p class="text-brand-dark text-sm leading-relaxed mb-4">"Rundum zufrieden. Vor allem wenn ich Fragen habe, ist der Service einfach großartig. Klare Weiterempfehlung!"</p><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-full bg-brand-navy flex items-center justify-center text-white font-bold text-xs">V</div><div><p class="font-semibold text-sm text-brand-dark">Viola F.</p><p class="text-xs text-brand-gray">München</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="ueber" class="py-24 bg-brand-light">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <p class="text-xs font-semibold text-brand-gold uppercase tracking-widest mb-4">Wer berät dich</p>
+        <h2 class="text-4xl font-black text-brand-dark mb-4">Kevin Brockmeyer</h2>
+        <p class="text-brand-gray leading-relaxed mb-4">Aufgewachsen in Trinidad & Tobago, hat Kevin früh gelernt, dass finanzielle Unabhängigkeit kein Zufall ist. Heute bringt er über 1.000 Beratungen in jedes Gespräch mit.</p>
+        <p class="text-brand-gray leading-relaxed mb-6">Kein Produktverkäufer. Ein strategischer Partner, der die Komplexität deiner Finanzen übernimmt – damit du dich auf das Wesentliche konzentrieren kannst.</p>
+        <a href="https://calendly.com/kevin-brockmeyer/brockmeyer-consulting-15-minuten" target="_blank" class="inline-flex items-center gap-2 text-brand-navy font-semibold text-sm">Lern uns kennen →</a>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="bg-white rounded-2xl p-6 text-center shadow-sm"><p class="text-3xl font-black text-brand-navy">1.000+</p><p class="text-xs text-brand-gray font-medium mt-1">Beratungen</p></div>
+        <div class="bg-white rounded-2xl p-6 text-center shadow-sm"><p class="text-3xl font-black text-brand-navy">300+</p><p class="text-xs text-brand-gray font-medium mt-1">Mandanten</p></div>
+        <div class="bg-white rounded-2xl p-6 text-center shadow-sm"><p class="text-3xl font-black text-brand-navy">4,97</p><p class="text-xs text-brand-gray font-medium mt-1">Sterne-Bewertung</p></div>
+        <div class="bg-white rounded-2xl p-6 text-center shadow-sm"><p class="text-3xl font-black text-brand-navy">10+</p><p class="text-xs text-brand-gray font-medium mt-1">Jahre Erfahrung</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="py-24 bg-brand-navy text-white text-center relative overflow-hidden">
+  <div class="relative max-w-3xl mx-auto px-6 lg:px-8">
+    <h2 class="text-4xl lg:text-5xl font-black mb-4">Bereit für klare Finanzen?</h2>
+    <p class="text-gray-300 text-lg mb-8">Das Erstgespräch ist kostenlos, unverbindlich und dauert 15 Minuten.</p>
+    <a href="https://calendly.com/kevin-brockmeyer/brockmeyer-consulting-15-minuten" target="_blank"
+       class="inline-flex items-center gap-2 bg-brand-gold text-white font-bold px-10 py-4 rounded-xl hover:bg-brand-gold-light transition-all hover:shadow-xl hover:-translate-y-0.5">
+      Kostenloses Erstgespräch buchen →
+    </a>
+    <p class="text-xs text-gray-500 mt-4">Kein Pitch · Keine Verpflichtung · Auf Augenhöhe</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-brand-dark text-white">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-8 h-8 bg-brand-navy rounded flex items-center justify-center"><span class="text-white font-bold text-sm">BC</span></div>
+          <span class="font-bold text-lg">Brockmeyer Consulting</span>
+        </div>
+        <p class="text-gray-400 text-sm leading-relaxed max-w-sm">Strategische Finanzberatung zu transparenten Festpreisen. Für Menschen, die ihre Zeit und ihr Geld ernst nehmen.</p>
+      </div>
+      <div>
+        <h4 class="text-sm font-semibold text-white mb-4">Navigation</h4>
+        <ul class="space-y-2">
+          <li><a href="#leistungen" class="text-gray-400 hover:text-white text-sm">Leistungen</a></li>
+          <li><a href="#preise" class="text-gray-400 hover:text-white text-sm">Preise</a></li>
+          <li><a href="#ueber" class="text-gray-400 hover:text-white text-sm">Über uns</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-sm font-semibold text-white mb-4">Kontakt</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="mailto:info@brockmeyer-consulting.com" class="hover:text-white">info@brockmeyer-consulting.com</a></li>
+          <li><a href="tel:+4917622224934" class="hover:text-white">+49 176 22224934</a></li>
+          <li class="mt-4">
+            <a href="https://calendly.com/kevin-brockmeyer/brockmeyer-consulting-15-minuten" target="_blank"
+               class="inline-block bg-brand-gold text-white font-semibold px-4 py-2 rounded-lg text-sm hover:bg-brand-gold-light transition-colors">
+              Erstgespräch buchen →
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+      <p>© 2026 Brockmeyer Consulting e. K. · Alle Rechte vorbehalten</p>
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-gray-300">Datenschutz</a>
+        <a href="#" class="hover:text-gray-300">Impressum</a>
+        <a href="#" class="hover:text-gray-300">Erstinformation</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div>
+<div class="fixed bottom-4 right-4 bg-brand-gold text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg">
+  📄 Preview-Datei · Laravel-Prototyp
+</div>
+</body>
+</html>

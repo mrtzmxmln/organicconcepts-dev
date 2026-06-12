@@ -1,0 +1,36 @@
+# Dependencies
+**/vendor/
+**/node_modules/
+
+# Environment
+**/.env
+**/.env.backup
+**/.env.production
+
+# Build output
+**/public/build/
+**/public/hot/
+**/public/storage/
+
+# Laravel runtime
+**/storage/framework/sessions/
+**/storage/framework/views/
+**/storage/framework/cache/data/
+**/bootstrap/cache/*.php
+**/storage/*.key
+**/storage/pail/
+
+# Database files
+**/database/*.sqlite
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+.cursor/

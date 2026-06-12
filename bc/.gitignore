@@ -1,0 +1,17 @@
+*.log
+.DS_Store
+.env
+.env.backup
+.env.production
+/bootstrap/cache/*.php
+/database/*.sqlite
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+Thumbs.db
+/storage/framework/sessions/
+/storage/framework/views/
+/storage/framework/cache/data/
